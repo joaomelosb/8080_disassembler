@@ -338,6 +338,7 @@ int main(int argc, char *argv[]) {
 
 		if (ferror(fp)) {
 			perror("read error");
+			free(buf);
 			return 1;
 		}
 
